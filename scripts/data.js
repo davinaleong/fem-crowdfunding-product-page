@@ -23,3 +23,5 @@ const data = {
     },
   ],
 }
+
+console.log(`Data: `, data)

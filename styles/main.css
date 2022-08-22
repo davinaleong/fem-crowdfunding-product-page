@@ -169,6 +169,9 @@ a:where(:hover, :focus, :focus-visible) {
 .btn-icon {
   display: none;
   background-color: transparent;
+  position: absolute;
+  z-index: 2;
+  right: var(--size-300);
 }
 
 .nav-list {
