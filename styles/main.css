@@ -294,7 +294,7 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .section {
-  --section-padding: var(--size-400);
+  --section-padding: var(--size-600);
 
   padding: var(--section-padding);
   background-color: var(--clr-neutral-100);
@@ -305,7 +305,7 @@ a:where(:hover, :focus, :focus-visible) {
 /** Content - Project Info **/
 .project-info-section {
   position: relative;
-  padding-top: var(--size-700);
+  padding-top: var(--size-800);
 }
 
 .project-info-section .section-icon {
@@ -343,6 +343,14 @@ a:where(:hover, :focus, :focus-visible) {
 
 .btn-bookmark > .btn-label {
   display: none;
+  margin-top: 0;
+}
+
+@media (min-width: 48em) {
+  .btn-bookmark > .btn-label {
+    min-width: 8em;
+    display: block;
+  }
 }
 
 /** Content - Primary Footer **/
