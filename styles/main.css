@@ -5,6 +5,8 @@
       - Content - Components
       - Content - Primary Header
       - Content - Primary Footer
+      - Content - Main Content
+      - Content - Project Info
     - Utility
       - Utility - Colours
       - Utility - Background Colours
@@ -24,6 +26,9 @@
   --clr-primary-400: hsl(176, 50%, 47%);
   --clr-primary-600: hsl(176, 72%, 28%);
 
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 98%);
+  --clr-neutral-300: hsl(0, 0%, 90%);
   --clr-neutral-400: hsl(0, 0%, 48%);
   --clr-neutral-900: hsl(0, 0%, 0%);
 
@@ -281,6 +286,65 @@ a:where(:hover, :focus, :focus-visible) {
   }
 }
 
+/** Content - Main Content **/
+.main-content {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(var(--size-600) * -1);
+}
+
+.section {
+  --section-padding: var(--size-400);
+
+  padding: var(--section-padding);
+  background-color: var(--clr-neutral-100);
+  border-radius: var(--size-400);
+  box-shadow: 0px 0px 0.3em 0 hsla(0, 0%, 0%, 0.1);
+}
+
+/** Content - Project Info **/
+.project-info-section {
+  position: relative;
+  padding-top: var(--size-700);
+}
+
+.project-info-section .section-icon {
+  position: absolute;
+  top: -1.75em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size-400);
+}
+
+.btn-container-flex > * {
+  margin-top: 0;
+}
+
+.btn-primary {
+  min-height: 3.5em;
+  min-width: 13.25em;
+  border-radius: 100vmax;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+
+.btn-bookmark {
+  --btn-padding: 0;
+
+  min-height: 3.5em;
+  border-radius: 100vmax;
+}
+
+.btn-bookmark > .btn-label {
+  display: none;
+}
+
 /** Content - Primary Footer **/
 
 /** Content - End **/
@@ -306,6 +370,15 @@ a:where(:hover, :focus, :focus-visible) {
   color: var(--clr-primary-600);
 }
 
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+.text-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+.text-neutral-300 {
+  color: var(--clr-neutral-300);
+}
 .text-neutral-400 {
   color: var(--clr-neutral-400);
 }
@@ -352,6 +425,15 @@ a:where(:hover, :focus, :focus-visible) {
   background-color: var(--clr-primary-600);
 }
 
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+.bg-neutral-300 {
+  background-color: var(--clr-neutral-300);
+}
 .bg-neutral-400 {
   background-color: var(--clr-neutral-400);
 }
@@ -1577,24 +1659,24 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 /** Utility - Alignment */
-.text-left {
+.ta-left {
   text-align: left;
 }
-.text-center {
+.ta-center {
   text-align: center;
 }
-.text-right {
+.ta-right {
   text-align: right;
 }
 
 @media (min-width: 62em) {
-  .text-md-left {
+  .ta-md-left {
     text-align: left;
   }
-  .text-md-center {
+  .ta-md-center {
     text-align: center;
   }
-  .text-md-right {
+  .ta-md-right {
     text-align: right;
   }
 }
@@ -1659,6 +1741,10 @@ a:where(:hover, :focus, :focus-visible) {
 }
 .lh-200 {
   line-height: 0.8em;
+}
+
+.lh-300 {
+  line-height: 1.1em;
 }
 
 /** Utility - Border Radius **/
