@@ -2,7 +2,9 @@
     - Root
     - Content
       - Content - General Styling
-      - Content - Card
+      - Content - Components
+      - Content - Primary Header
+      - Content - Primary Footer
     - Utility
       - Utility - Colours
       - Utility - Background Colours
@@ -70,8 +72,6 @@
   --size-1100: 7rem;
 
   --transition: all 0.3s ease-in-out;
-
-  --column-spacing: var(--size-500);
 }
 /** Root - End **/
 
@@ -89,12 +89,6 @@ body {
 strong,
 b {
   font-weight: var(--fw-bold);
-}
-
-main {
-  display: grid;
-  align-items: center;
-  justify-items: center;
 }
 
 .swatches {
@@ -134,6 +128,82 @@ main {
   align-items: center;
   justify-items: center;
 }
+
+.container {
+  --container-width: 1110px;
+
+  max-width: var(--container-width);
+  padding-inline: var(--size-400);
+  margin-inline: auto;
+}
+
+.bg-full {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  --clr-link: var(--clr-grey-900);
+  --clr-hover-link: var(--clr-grey-400);
+
+  color: var(--clr-link);
+  text-decoration: none;
+}
+
+a:where(:hover, :focus, :focus-visible) {
+  color: var(--clr-hover-link);
+}
+
+/** Content - Components **/
+.btn {
+  --btn-padding: var(--size-100);
+
+  padding: var(--btn-padding);
+  border: none;
+}
+
+.btn-icon {
+  display: none;
+  background-color: transparent;
+}
+
+.nav-list {
+  --nav-list-spacer: var(--size-400);
+
+  display: flex;
+  gap: var(--nav-list-spacer);
+}
+
+/** Content - Primary Header **/
+.primary-header {
+  background-image: url(./../images/image-hero-mobile.jpg);
+  min-height: 80vw;
+}
+
+.primary-header .nav-link {
+  --clr-link: var(--clr-grey-100);
+  --clr-hover-link: var(--clr-grey-100);
+}
+
+@media (min-width: 48em) {
+  .primary-header {
+    min-height: 28vw;
+  }
+}
+
+.primary-header-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.primary-navigation > .nav-list {
+  --nav-list-spacer: var(--size-600);
+
+  justify-content: end;
+}
+
+/** Content - Primary Footer **/
 
 /** Content - End **/
 
