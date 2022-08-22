@@ -29,13 +29,18 @@
   </head>
   <body>
     <main>
-      <header class="primary-header bg-full | py-400 no-repeat">
+      <header class="primary-header bg-full | py-400 no-repeat" data-open>
         <div class="container | primary-header-grid">
-          <a href="#" class="brand" aria-label="Logo">
+          <a href="#" class="brand">
             <img src="./images/logo.svg" alt="Logo" class="brand-image" />
           </a>
-          <button class="btn btn-icon" aria-label="Toggle menu">
-            <img src="./images/icon-hamburger.svg" />
+          <button
+            class="btn btn-icon"
+            aria-label="Toggle menu"
+            data-primary-toggle
+          >
+            <img src="./images/icon-hamburger.svg" class="icon-hamburger" />
+            <img src="./images/icon-close-menu.svg" class="icon-close" />
           </button>
           <nav class="primary-navigation">
             <ul class="nav-list" role="list">

@@ -161,6 +161,9 @@ a:where(:hover, :focus, :focus-visible) {
 
   padding: var(--btn-padding);
   border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-icon {
@@ -184,6 +187,26 @@ a:where(:hover, :focus, :focus-visible) {
 .primary-header .nav-link {
   --clr-link: var(--clr-grey-100);
   --clr-hover-link: var(--clr-grey-100);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-header-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+
+.primary-navigation > .nav-list {
+  --nav-list-spacer: var(--size-600);
+
+  justify-content: end;
+}
+
+.icon-close {
+  display: none;
 }
 
 @media (min-width: 48em) {
@@ -192,15 +215,67 @@ a:where(:hover, :focus, :focus-visible) {
   }
 }
 
-.primary-header-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+@media (max-width: 47.99em) {
+  .primary-header .primary-navigation {
+    display: none;
+  }
 
-.primary-navigation > .nav-list {
-  --nav-list-spacer: var(--size-600);
+  .btn-icon {
+    display: inline-flex;
+    justify-self: end;
+  }
 
-  justify-content: end;
+  .primary-header[data-open] .primary-navigation {
+    position: absolute;
+    display: block;
+    top: calc(var(--size-400) * -1);
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: var(--size-800) var(--size-500);
+    background-image: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0) 25%,
+      hsla(0, 0%, 0%, 0.2) 40%,
+      hsla(0, 0%, 0%, 0.1) 60%,
+      hsla(0, 0%, 0%, 0) 100%
+    );
+  }
+
+  .primary-header[data-open] .nav-list {
+    --nav-list-spacer: 0;
+    flex-direction: column;
+    text-align: center;
+    border-radius: var(--size-400);
+    overflow: hidden;
+  }
+
+  .primary-header[data-open] .nav-list-item {
+    width: 100%;
+  }
+
+  .primary-header[data-open] .nav-link {
+    --clr-link: var(--clr-grey-1000);
+    --clr-hover-link: var(--clr-grey-1000);
+
+    width: 100%;
+    justify-content: start;
+    padding: var(--size-400);
+    background-color: var(--clr-grey-100);
+    font-weight: var(--fw-bold);
+  }
+
+  .primary-header[data-open] .nav-list-item:not(:last-of-type) .nav-link {
+    border-bottom: thin solid var(--clr-grey-200);
+  }
+
+  .primary-header[data-open] .icon-hamburger {
+    display: none;
+  }
+
+  .primary-header[data-open] .icon-close {
+    display: block;
+  }
 }
 
 /** Content - Primary Footer **/
