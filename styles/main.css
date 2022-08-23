@@ -597,6 +597,20 @@ input[type="radio"]:checked + .pledge-radio::before {
 .pledge-modal[data-selected] .pledge-modal-footer {
   display: block;
 }
+
+@media (min-width: 48em) {
+  .pledge-modal[data-selected] .pledge-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pledge-modal[data-selected] .pledge-modal-footer p {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
 /** Content - Thank You Modal **/
 
 /** Content - End **/
