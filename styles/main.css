@@ -438,6 +438,7 @@ a:where(:hover, :focus, :focus-visible) {
   padding: var(--size-500);
   display: grid;
   gap: var(--size-400);
+  background-color: var(--clr-neutral-100);
 }
 
 .pledge .btn-primary {
@@ -448,6 +449,14 @@ a:where(:hover, :focus, :focus-visible) {
   display: flex;
   align-items: center;
   gap: var(--size-100);
+}
+
+[data-not-available] {
+  opacity: 0.5;
+}
+
+[data-not-available] .btn-primary {
+  background-color: var(--clr-neutral-500);
 }
 
 /** Content - End **/
