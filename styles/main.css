@@ -4,9 +4,9 @@
       - Content - General Styling
       - Content - Components
       - Content - Primary Header
-      - Content - Primary Footer
       - Content - Main Content
-      - Content - Project Info
+      - Content - Project Info Section
+      - Content - Progress Section
     - Utility
       - Utility - Colours
       - Utility - Background Colours
@@ -291,6 +291,9 @@ a:where(:hover, :focus, :focus-visible) {
   position: relative;
   z-index: 1;
   margin-top: calc(var(--size-700) * -1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-600);
 }
 
 .section {
@@ -302,7 +305,7 @@ a:where(:hover, :focus, :focus-visible) {
   box-shadow: 0px 0px 0.3em 0 hsla(0, 0%, 0%, 0.1);
 }
 
-/** Content - Project Info **/
+/** Content - Project Info Section **/
 .project-info-section {
   position: relative;
   padding-top: var(--size-700);
@@ -352,7 +355,47 @@ a:where(:hover, :focus, :focus-visible) {
   }
 }
 
-/** Content - Primary Footer **/
+/** Content - Progress Section **/
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.progress-info > div {
+  position: relative;
+}
+
+.progress-info > div:not(:last-of-type)::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 5em;
+  height: 1px;
+  background-color: var(--clr-grey-200);
+  transform: translateX(-50%);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.8em;
+  border-radius: 100vmax;
+  background-color: var(--clr-neutral-300);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--progress);
+  border-radius: 100vmax;
+  background-color: var(--clr-primary-400);
+}
 
 /** Content - End **/
 
