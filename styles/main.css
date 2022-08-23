@@ -8,6 +8,8 @@
       - Content - Project Info Section
       - Content - Progress Section
       - Content - About Section
+      - Content - Back Project Modal
+      - Content - Thank You Modal
     - Utility
       - Utility - Colours
       - Utility - Background Colours
@@ -20,6 +22,7 @@
       - Utility - Letter Spacings
       - Utility - Line Heights
       - Utility - Border Radius
+      - Utility - Position
 */
 
 /** Root **/
@@ -141,7 +144,7 @@ b {
   --container-width: 1110px;
 
   max-width: var(--container-width);
-  padding-inline: var(--size-400);
+  padding-inline: var(--size-600);
   margin-inline: auto;
 }
 
@@ -342,7 +345,7 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .project-info-section .btn-primary {
-  min-width: 13.25em;
+  min-width: 11em;
 }
 
 .btn-bookmark {
@@ -481,6 +484,64 @@ a:where(:hover, :focus, :focus-visible) {
     justify-self: end;
   }
 }
+
+/** Content - Back Project Modal **/
+.modal {
+  position: absolute;
+  inset: 0;
+  padding: var(--size-900) var(--size-600);
+  background-color: hsla(0, 0%, 0%, 0.3);
+  z-index: 5;
+}
+
+.modal-dialog {
+  background-color: var(--clr-grey-100);
+  border-radius: var(--size-400);
+  padding: var(--size-500);
+  position: relative;
+}
+
+.pledges-modal-flex {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-600);
+}
+
+.pledge-modal {
+  border: thin solid var(--clr-neutral-400);
+  border-radius: var(--size-400);
+  padding: var(--size-500);
+  display: grid;
+  gap: var(--size-400);
+}
+
+.pledge-modal-header {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: max-content max-content;
+  gap: 0 var(--size-400);
+  align-items: center;
+}
+
+.pledge-modal-header > .pledge-radio {
+  grid-row: 1 / span 2;
+}
+
+.pledge-modal-header input[type="radio"] {
+  display: none;
+}
+
+.pledge-radio {
+  --size: 2em;
+
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--clr-neutral1);
+  border: thin solid var(--clr-neutral-400);
+  border-radius: 50%;
+}
+
+/** Content - Thank You Modal **/
 
 /** Content - End **/
 
@@ -1927,6 +1988,23 @@ a:where(:hover, :focus, :focus-visible) {
 }
 .br-round {
   border-radius: 50%;
+}
+
+/** Utility - Position **/
+.pos-static {
+  position: static;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.pos-sticky {
+  position: sticky;
 }
 
 /** Utility - End **/

@@ -28,7 +28,7 @@
     <script defer src="./scripts/main.js"></script>
   </head>
   <body>
-    <main class="bg-neutral-200">
+    <main class="pos-relative bg-neutral-200">
       <header
         class="primary-header bg-full | py-400 no-repeat"
         data-primary-header
@@ -205,29 +205,101 @@
           </div>
         </section>
       </div>
+
+      <div class="modal modal-pledges">
+        <div class="modal-dialog">
+          <button class="btn btn-icon" type="button">
+            <img src="./images/icon-close-modal.svg" alt="Close Icon" />
+          </button>
+
+          <h2 class="fw-bold fs-500 mb-500">Back this project</h2>
+
+          <p class="text-neutral-500 mb-500">
+            Want to support us in bringing Mastercraft Bamboo Monitor Riser out
+            in the world?
+          </p>
+
+          <form method="POST" class="pledges-modal-flex" data-pledges-form>
+            <div class="pledge-modal">
+              <div class="pledge-modal-header">
+                <label for="pledge1" class="pledge-radio">&nbsp;</label>
+                <input
+                  type="radio"
+                  name="pledge"
+                  id="pledge1"
+                  value="no-reward"
+                />
+
+                <h3 class="fw-bold">Pledge with no reward</h3>
+                <p class="text-primary-400">Pledge $25 or more</p>
+              </div>
+              <div class="pledge-modal-content">
+                <p class="text-neutral-500">
+                  Choose to support us without a reward if you simply believe in
+                  our project. As a backer, you will be signed up to receive
+                  product updates via email.
+                </p>
+              </div>
+              <div class="pledge-amount text-neutral-600">
+                <div class="text-neutral-900 fw-bold fs-700">101</div>
+                <div>left</div>
+              </div>
+            </div>
+
+            <div class="pledge-modal">
+              <div class="pledge-modal-header">
+                <label for="pledge1" class="pledge-radio">&nbsp;</label>
+                <input
+                  type="radio"
+                  name="pledge"
+                  id="pledge1"
+                  value="no-reward"
+                />
+
+                <h3 class="fw-bold">Pledge with no reward</h3>
+                <p class="text-primary-400">Pledge $25 or more</p>
+              </div>
+              <div class="pledge-modal-content">
+                <p class="text-neutral-500">
+                  Choose to support us without a reward if you simply believe in
+                  our project. As a backer, you will be signed up to receive
+                  product updates via email.
+                </p>
+              </div>
+              <div class="pledge-amount text-neutral-600">
+                <div class="text-neutral-900 fw-bold fs-700">101</div>
+                <div>left</div>
+              </div>
+            </div>
+
+            <div class="pledge-modal" data-not-available="">
+              <div class="pledge-modal-header">
+                <label for="pledge1" class="pledge-radio">&nbsp;</label>
+                <input
+                  type="radio"
+                  name="pledge"
+                  id="pledge1"
+                  value="no-reward"
+                />
+
+                <h3 class="fw-bold">Pledge with no reward</h3>
+                <p class="text-primary-400">Pledge $25 or more</p>
+              </div>
+              <div class="pledge-modal-content">
+                <p class="text-neutral-500">
+                  Choose to support us without a reward if you simply believe in
+                  our project. As a backer, you will be signed up to receive
+                  product updates via email.
+                </p>
+              </div>
+              <div class="pledge-amount text-neutral-600">
+                <div class="text-neutral-900 fw-bold fs-700">101</div>
+                <div>left</div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
-
-    <div class="swatches | p-400">
-      <div class="bg-primary-400"></div>
-      <div class="bg-primary-600"></div>
-
-      <div class="bg-neutral-100"></div>
-      <div class="bg-neutral-200"></div>
-      <div class="bg-neutral-300"></div>
-      <div class="bg-neutral-400"></div>
-      <div class="bg-neutral-500"></div>
-      <div class="bg-neutral-600"></div>
-      <div class="bg-neutral-900"></div>
-
-      <div class="bg-grey-100"></div>
-      <div class="bg-grey-200"></div>
-      <div class="bg-grey-300"></div>
-      <div class="bg-grey-400"></div>
-      <div class="bg-grey-500"></div>
-      <div class="bg-grey-600"></div>
-      <div class="bg-grey-700"></div>
-      <div class="bg-grey-800"></div>
-      <div class="bg-grey-900"></div>
-    </div>
   </body>
 </html>
