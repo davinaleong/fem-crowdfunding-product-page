@@ -510,9 +510,13 @@ a:where(:hover, :focus, :focus-visible) {
 .pledge-modal {
   border: thin solid var(--clr-neutral-400);
   border-radius: var(--size-400);
-  padding: var(--size-500);
+  overflow: hidden;
+}
+
+.pledge-modal-body {
   display: grid;
   gap: var(--size-400);
+  padding: var(--size-400);
 }
 
 .pledge-modal-header {
@@ -550,6 +554,49 @@ input[type="radio"]:checked + .pledge-radio::before {
   border-radius: 50%;
 }
 
+.pledge-modal-footer {
+  display: none;
+  border-top: thin solid var(--clr-neutral-400);
+  padding: var(--size-400);
+}
+
+.pledge-modal-footer p {
+  text-align: center;
+  margin-bottom: var(--size-400);
+}
+
+.pledge-modal-controls {
+  display: flex;
+  gap: var(--size-400);
+}
+
+.pledge-input-group {
+  border: thin solid var(--clr-neutral-400);
+  border-radius: 100vmax;
+  padding: var(--size-200) var(--size-400);
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: var(--size-200);
+  align-items: center;
+}
+
+.pledge-input-group:where(:focus, :focus-visible) {
+  border: thin solid var(--clr-primary-600);
+}
+
+.pledge-input {
+  height: 100%;
+  border: none;
+  max-width: 5ch;
+}
+
+.pledge-modal[data-selected] {
+  border: 2px solid var(--clr-primary-400);
+}
+
+.pledge-modal[data-selected] .pledge-modal-footer {
+  display: block;
+}
 /** Content - Thank You Modal **/
 
 /** Content - End **/
