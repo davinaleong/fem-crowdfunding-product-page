@@ -487,11 +487,16 @@ a:where(:hover, :focus, :focus-visible) {
 
 /** Content - Back Project Modal **/
 .modal {
+  display: none;
   position: absolute;
   inset: 0;
   padding: var(--size-900) var(--size-600);
   background-color: hsla(0, 0%, 0%, 0.3);
   z-index: 5;
+}
+
+.modal[data-open] {
+  display: block;
 }
 
 .modal-dialog {

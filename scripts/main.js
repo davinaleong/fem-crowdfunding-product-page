@@ -1,7 +1,10 @@
 const primaryHeaderEl = document.querySelector(`[data-primary-header]`)
 const primaryToggleEl = document.querySelector(`[data-primary-toggle]`)
 
+const btnBackProjectEl = document.querySelector(`[data-btn-back-project]`)
+
 const pledgesEl = document.querySelector(`[data-pledges]`)
+const pledgesFormEl = document.querySelector(`[data-pledges-form]`)
 
 primaryToggleEl.addEventListener(`click`, (e) => {
   primaryHeaderEl.toggleAttribute(`data-open`)
@@ -18,7 +21,8 @@ pledges.forEach((pledge) => {
     btnLabel = `Out of Stock`
   }
 
-  pledgesHtml += `
+  if (amount > 0) {
+    pledgesHtml += `
     <div class="pledge" ${notAvailable}>
         <div class="pledge-header">
             <h3 class="fw-bold">${title}</h3>
@@ -41,5 +45,6 @@ pledges.forEach((pledge) => {
         </div>
     </div>
     `
+  }
 })
 pledgesEl.innerHTML = pledgesHtml

@@ -1,6 +1,15 @@
 const data = {
   pledges: [
     {
+      key: "no-reward",
+      title: "Pledge with no reward",
+      amount: 0,
+      description:
+        "Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.",
+      count: "infinity",
+    },
+    {
+      key: "bamboo-stand",
       title: "Bamboo Stand",
       amount: 25,
       description:
@@ -8,6 +17,7 @@ const data = {
       count: 101,
     },
     {
+      key: "black-edition",
       title: "Black Edition Stand",
       amount: 75,
       description:
@@ -15,6 +25,7 @@ const data = {
       count: 64,
     },
     {
+      key: "mahogany-special",
       title: "Mahogany Special Edition",
       amount: 200,
       description:
