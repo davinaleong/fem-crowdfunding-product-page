@@ -7,6 +7,7 @@
       - Content - Main Content
       - Content - Project Info Section
       - Content - Progress Section
+      - Content - About Section
     - Utility
       - Utility - Colours
       - Utility - Background Colours
@@ -181,6 +182,15 @@ a:where(:hover, :focus, :focus-visible) {
   right: var(--size-300);
 }
 
+.btn-primary {
+  --btn-padding: var(--size-200) var(--size-400);
+
+  min-height: 3.5em;
+  border-radius: 100vmax;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+
 .nav-list {
   --nav-list-spacer: var(--size-400);
 
@@ -331,12 +341,8 @@ a:where(:hover, :focus, :focus-visible) {
   margin-top: 0;
 }
 
-.btn-primary {
-  min-height: 3.5em;
+.project-info-section .btn-primary {
   min-width: 13.25em;
-  border-radius: 100vmax;
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-400);
 }
 
 .btn-bookmark {
@@ -363,6 +369,7 @@ a:where(:hover, :focus, :focus-visible) {
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, 1fr);
   text-align: center;
+  gap: var(--size-600);
 }
 
 .progress-info > div {
@@ -404,6 +411,7 @@ a:where(:hover, :focus, :focus-visible) {
   .progress-info {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100%;
+    text-align: left;
   }
 
   .progress-info > div:not(:last-of-type)::before {
@@ -415,6 +423,31 @@ a:where(:hover, :focus, :focus-visible) {
     height: 3em;
     transform: translateY(-50%);
   }
+}
+
+/** Content - About Section **/
+.pledges-flex {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-600);
+}
+
+.pledge {
+  border: thin solid var(--clr-neutral-400);
+  border-radius: var(--size-200);
+  padding: var(--size-500);
+  display: grid;
+  gap: var(--size-400);
+}
+
+.pledge .btn-primary {
+  min-width: 10em;
+}
+
+.pledge-amount {
+  display: flex;
+  align-items: center;
+  gap: var(--size-100);
 }
 
 /** Content - End **/
