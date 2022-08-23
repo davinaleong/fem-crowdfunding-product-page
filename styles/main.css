@@ -527,17 +527,26 @@ a:where(:hover, :focus, :focus-visible) {
   grid-row: 1 / span 2;
 }
 
-.pledge-modal-header input[type="radio"] {
-  display: none;
-}
-
 .pledge-radio {
   --size: 2em;
 
   width: var(--size);
   height: var(--size);
-  background-color: var(--clr-neutral1);
+  background-color: var(--clr-neutral-100);
   border: thin solid var(--clr-neutral-400);
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + .pledge-radio::before {
+  --size: 1.1em;
+
+  content: "";
+  display: block;
+  margin-top: 0.4em;
+  margin-left: 0.4em;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--clr-primary-400);
   border-radius: 50%;
 }
 
