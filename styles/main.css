@@ -459,6 +459,29 @@ a:where(:hover, :focus, :focus-visible) {
   background-color: var(--clr-neutral-500);
 }
 
+@media (min-width: 48em) {
+  .pledge {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pledge-header {
+    grid-column: 1 / span 2;
+  }
+
+  .pledge-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pledge-content {
+    grid-column: 1 / span 2;
+  }
+
+  .pledge-controls {
+    justify-self: end;
+  }
+}
+
 /** Content - End **/
 
 /** Utility **/
