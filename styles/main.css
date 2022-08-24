@@ -197,6 +197,10 @@ a:where(:hover, :focus, :focus-visible) {
   background-color: var(--clr-primary-400);
 }
 
+.btn-primary:where(:hover, :focus, :focus-visible) {
+  background-color: var(--clr-primary-600);
+}
+
 .nav-list {
   --nav-list-spacer: var(--size-400);
 
@@ -505,6 +509,10 @@ a:where(:hover, :focus, :focus-visible) {
   z-index: 5;
 }
 
+.modal .btn-primary {
+  min-width: 10em;
+}
+
 .modal[data-open] {
   display: block;
 }
@@ -537,7 +545,6 @@ a:where(:hover, :focus, :focus-visible) {
   grid-template-columns: 100%;
   grid-template-rows: repeat(4, max-content);
   gap: var(--size-600);
-  max-height: 70vh;
   overflow-y: auto;
 }
 

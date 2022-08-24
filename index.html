@@ -124,7 +124,7 @@
             USB sticks to be stored under the stand.
           </p>
 
-          <div class="pledges-flex" data-pledges>
+          <div class="pledges-flex" data-pledges="">
             <div class="pledge">
               <div class="pledge-header">
                 <h3 class="fw-bold">Bamboo Stand</h3>
@@ -145,7 +145,7 @@
               </div>
 
               <div class="pledge-controls">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" type="button" data-btn-pledge>
                   Select Reward
                 </button>
               </div>
@@ -153,20 +153,20 @@
 
             <div class="pledge">
               <div class="pledge-header">
-                <h3 class="fw-bold">Bamboo Stand</h3>
-                <p class="text-primary-400">Pledge $25 or more</p>
+                <h3 class="fw-bold">Black Edition Stand</h3>
+                <p class="text-primary-400">Pledge $75 or more</p>
               </div>
 
               <div class="pledge-content">
                 <p class="text-neutral-600">
-                  You get an ergonomic stand made of natural bamboo. You've
-                  helped us launch our promotional campaign, and you’ll be added
-                  to a special Backer member list.
+                  You get a Black Special Edition computer stand and a personal
+                  thank you. You’ll be added to our Backer member list. Shipping
+                  is included.
                 </p>
               </div>
 
               <div class="pledge-amount text-neutral-600">
-                <div class="text-neutral-900 fw-bold fs-700">101</div>
+                <div class="text-neutral-900 fw-bold fs-700">64</div>
                 <div>left</div>
               </div>
 
@@ -177,27 +177,27 @@
               </div>
             </div>
 
-            <div class="pledge" data-not-available>
+            <div class="pledge" data-not-available="">
               <div class="pledge-header">
-                <h3 class="fw-bold">Bamboo Stand</h3>
-                <p class="text-primary-400">Pledge $25 or more</p>
+                <h3 class="fw-bold">Mahogany Special Edition</h3>
+                <p class="text-primary-400">Pledge $200 or more</p>
               </div>
 
               <div class="pledge-content">
                 <p class="text-neutral-600">
-                  You get an ergonomic stand made of natural bamboo. You've
-                  helped us launch our promotional campaign, and you’ll be added
-                  to a special Backer member list.
+                  You get two Special Edition Mahogany stands, a Backer T-Shirt,
+                  and a personal thank you. You’ll be added to our Backer member
+                  list. Shipping is included.
                 </p>
               </div>
 
               <div class="pledge-amount text-neutral-600">
-                <div class="text-neutral-900 fw-bold fs-700">101</div>
+                <div class="text-neutral-900 fw-bold fs-700">0</div>
                 <div>left</div>
               </div>
 
               <div class="pledge-controls">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" type="button" data-btn-pledge>
                   Out of Stock
                 </button>
               </div>
@@ -223,21 +223,20 @@
             in the world?
           </p>
 
-          <form method="POST" class="pledges-modal-grid" data-pledges-form>
-            <div class="pledge-modal">
+          <form method="POST" class="pledges-modal-grid" data-pledges-form="">
+            <div class="pledge-modal" data-key="no-reward">
               <div class="pledge-modal-body">
                 <div class="pledge-modal-header">
                   <input
                     type="radio"
                     name="pledge"
-                    id="pledge1"
+                    id="pledge0"
                     value="no-reward"
                     class="visually-hidden"
                   />
-                  <label for="pledge1" class="pledge-radio">&nbsp;</label>
+                  <label for="pledge0" class="pledge-radio">&nbsp;</label>
 
                   <h3 class="fw-bold">Pledge with no reward</h3>
-                  <p class="text-primary-400">Pledge $25 or more</p>
                 </div>
                 <div class="pledge-modal-content">
                   <p class="text-neutral-500">
@@ -246,8 +245,152 @@
                     receive product updates via email.
                   </p>
                 </div>
+              </div>
+              <div class="pledge-modal-footer">
+                <p class="text-neutral-500">Enter your pledge</p>
+                <div class="pledge-modal-controls">
+                  <div class="pledge-input-group">
+                    <div class="text-neutral-500 fw-bold">$</div>
+                    <input
+                      type="number"
+                      name="amount"
+                      class="pledge-input"
+                      min="0"
+                      step="0.01"
+                    />
+                  </div>
+                  <button class="btn btn-primary" type="button" data-btn-pledge>
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pledge-modal" data-key="bamboo-stand">
+              <div class="pledge-modal-body">
+                <div class="pledge-modal-header">
+                  <input
+                    type="radio"
+                    name="pledge"
+                    id="pledge1"
+                    value="bamboo-stand"
+                    class="visually-hidden"
+                  />
+                  <label for="pledge1" class="pledge-radio">&nbsp;</label>
+
+                  <h3 class="fw-bold">Bamboo Stand</h3>
+                  <p class="text-primary-400">Pledge $25 or more</p>
+                </div>
+                <div class="pledge-modal-content">
+                  <p class="text-neutral-500">
+                    You get an ergonomic stand made of natural bamboo. You've
+                    helped us launch our promotional campaign, and you’ll be
+                    added to a special Backer member list.
+                  </p>
+                </div>
+
                 <div class="pledge-amount text-neutral-600">
                   <div class="text-neutral-900 fw-bold fs-700">101</div>
+                  <div>left</div>
+                </div>
+              </div>
+              <div class="pledge-modal-footer">
+                <p class="text-neutral-500">Enter your pledge</p>
+                <div class="pledge-modal-controls">
+                  <div class="pledge-input-group">
+                    <div class="text-neutral-500 fw-bold">$</div>
+                    <input
+                      type="number"
+                      name="amount"
+                      class="pledge-input"
+                      min="0"
+                      step="0.01"
+                    />
+                  </div>
+                  <button class="btn btn-primary" type="button">
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pledge-modal" data-key="black-edition">
+              <div class="pledge-modal-body">
+                <div class="pledge-modal-header">
+                  <input
+                    type="radio"
+                    name="pledge"
+                    id="pledge2"
+                    value="black-edition"
+                    class="visually-hidden"
+                  />
+                  <label for="pledge2" class="pledge-radio">&nbsp;</label>
+
+                  <h3 class="fw-bold">Black Edition Stand</h3>
+                  <p class="text-primary-400">Pledge $75 or more</p>
+                </div>
+                <div class="pledge-modal-content">
+                  <p class="text-neutral-500">
+                    You get a Black Special Edition computer stand and a
+                    personal thank you. You’ll be added to our Backer member
+                    list. Shipping is included.
+                  </p>
+                </div>
+
+                <div class="pledge-amount text-neutral-600">
+                  <div class="text-neutral-900 fw-bold fs-700">64</div>
+                  <div>left</div>
+                </div>
+              </div>
+              <div class="pledge-modal-footer">
+                <p class="text-neutral-500">Enter your pledge</p>
+                <div class="pledge-modal-controls">
+                  <div class="pledge-input-group">
+                    <div class="text-neutral-500 fw-bold">$</div>
+                    <input
+                      type="number"
+                      name="amount"
+                      class="pledge-input"
+                      min="0"
+                      step="0.01"
+                    />
+                  </div>
+                  <button class="btn btn-primary" type="button">
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pledge-modal"
+              data-key="mahogany-special"
+              data-not-available
+            >
+              <div class="pledge-modal-body">
+                <div class="pledge-modal-header">
+                  <input
+                    type="radio"
+                    name="pledge"
+                    id="pledge3"
+                    value="mahogany-special"
+                    class="visually-hidden"
+                  />
+                  <label for="pledge3" class="pledge-radio">&nbsp;</label>
+
+                  <h3 class="fw-bold">Mahogany Special Edition</h3>
+                  <p class="text-primary-400">Pledge $200 or more</p>
+                </div>
+                <div class="pledge-modal-content">
+                  <p class="text-neutral-500">
+                    You get two Special Edition Mahogany stands, a Backer
+                    T-Shirt, and a personal thank you. You’ll be added to our
+                    Backer member list. Shipping is included.
+                  </p>
+                </div>
+
+                <div class="pledge-amount text-neutral-600">
+                  <div class="text-neutral-900 fw-bold fs-700">0</div>
                   <div>left</div>
                 </div>
               </div>
