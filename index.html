@@ -40,7 +40,7 @@
           <button
             class="btn btn-icon"
             aria-label="Toggle menu"
-            data-primary-toggle
+            data-btn-primary-toggle
           >
             <img src="./images/icon-hamburger.svg" class="icon-hamburger" />
             <img src="./images/icon-close-menu.svg" class="icon-close" />
@@ -206,9 +206,13 @@
         </section>
       </div>
 
-      <div class="modal modal-pledges">
+      <div class="modal modal-pledges" data-modal-pledges>
         <div class="modal-dialog">
-          <button class="btn btn-icon" type="button">
+          <button
+            class="btn btn-icon"
+            type="button"
+            data-btn-close-pledge-modal
+          >
             <img src="./images/icon-close-modal.svg" alt="Close Icon" />
           </button>
 
@@ -219,7 +223,7 @@
             in the world?
           </p>
 
-          <form method="POST" class="pledges-modal-flex" data-pledges-form>
+          <form method="POST" class="pledges-modal-grid" data-pledges-form>
             <div class="pledge-modal">
               <div class="pledge-modal-body">
                 <div class="pledge-modal-header">
