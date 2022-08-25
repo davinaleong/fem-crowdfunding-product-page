@@ -4,7 +4,7 @@ Another simple challenge from Frontend Mentor.
 
 The challenge can be found [here](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U).
 
-Demo page coming soon!
+Demo page can be found [here](https://davinaleong.github.io/fem-crowdfunding-product-page/)!
 
 ## Getting Started
 
