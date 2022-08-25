@@ -248,6 +248,7 @@ a:where(:hover, :focus, :focus-visible) {
 
 @media (min-width: 48em) {
   .primary-header {
+    background-image: url(./../images/image-hero-desktop.jpg);
     min-height: 28vw;
   }
 }
