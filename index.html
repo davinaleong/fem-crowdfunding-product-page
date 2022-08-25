@@ -171,7 +171,7 @@
               </div>
 
               <div class="pledge-controls">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" type="button" data-btn-pledge>
                   Select Reward
                 </button>
               </div>
@@ -206,7 +206,7 @@
         </section>
       </div>
 
-      <div class="modal modal-pledges" data-modal-pledges>
+      <div class="modal modal-pledges" data-modal-pledges data-open>
         <div class="modal-dialog">
           <button
             class="btn btn-icon"
@@ -223,7 +223,7 @@
             in the world?
           </p>
 
-          <form method="POST" class="pledges-modal-grid" data-pledges-form="">
+          <form method="POST" class="pledges-modal-grid" data-form-pledges>
             <div class="pledge-modal" data-key="no-reward">
               <div class="pledge-modal-body">
                 <div class="pledge-modal-header">
@@ -259,7 +259,11 @@
                       step="0.01"
                     />
                   </div>
-                  <button class="btn btn-primary" type="button" data-btn-pledge>
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-btn-continue
+                  >
                     Continue
                   </button>
                 </div>
@@ -307,7 +311,11 @@
                       step="0.01"
                     />
                   </div>
-                  <button class="btn btn-primary" type="button">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-btn-continue
+                  >
                     Continue
                   </button>
                 </div>
@@ -355,7 +363,11 @@
                       step="0.01"
                     />
                   </div>
-                  <button class="btn btn-primary" type="button">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-btn-continue
+                  >
                     Continue
                   </button>
                 </div>
@@ -407,13 +419,47 @@
                       step="0.01"
                     />
                   </div>
-                  <button class="btn btn-primary" type="button">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-btn-continue
+                  >
                     Continue
                   </button>
                 </div>
               </div>
             </div>
           </form>
+        </div>
+      </div>
+
+      <div class="modal modal-thank-you" data-modal-thank-you>
+        <div class="modal-dialog ta-center">
+          <img
+            src="./images/icon-check.svg"
+            alt="Check Icon"
+            class="mx-auto mb-500"
+          />
+
+          <h2 class="fw-bold fs-500 mb-500">Thanks for your support!</h2>
+
+          <div class="mb-500">
+            <p>
+              Your pledge brings us one step closer to sharing Mastercraft
+              Bamboo Monitor Riser worldwide. You will get an email once our
+              campaign is completed.
+            </p>
+          </div>
+
+          <div>
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-btn-close-thank-you-modal
+            >
+              Got it!
+            </button>
+          </div>
         </div>
       </div>
     </main>
